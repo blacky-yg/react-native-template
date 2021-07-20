@@ -8,6 +8,8 @@ import { Platform } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import Header from './components/Header';
+import Footer from './components/Footer'
+import { navigationRef } from './components/RouteNavigation';
 
 const Stack = createStackNavigator();
 
@@ -20,12 +22,16 @@ export default function App() {
         return (<AppLoading />);
     } else {
         return (
-            <NavigationContainer style={{ paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0}}>
+            <NavigationContainer
+                style={{ paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0}}
+                ref={navigationRef}
+            >
                 <Stack.Navigator initialRouteName="Home" headerMode="screen">
                     <Stack.Screen name="Home" component={Home} options={{
                         header: () => <Header headerTitle="Home" />
                     }}/>
                 </Stack.Navigator>
+                <Footer />
             </NavigationContainer>
         );
     }

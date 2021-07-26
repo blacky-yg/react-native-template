@@ -25,6 +25,6 @@ const styles = StyleSheet.create({
         height: 35
     },
     logoDesc: {
-        // fontFamily: 'OpenSans'
+        fontFamily: 'OpenSans'
     }
 });

@@ -15,11 +15,7 @@ export default function Home() {
 
     const storyItem = ({item}) => {
         return (
-            <TouchableWithoutFeedback
-                onPress={() =>
-                    navigation.navigate("NewsDetail", {url: item.url})
-                }
-            >
+            <TouchableWithoutFeedback>
 
                 <View style={styles.listings}>
                     <Text style={styles.title}>

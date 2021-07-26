@@ -5,10 +5,7 @@ import logo from '../assets/icon.png';
 export default function Header(props) {
     return (
         <View style={styles.header}>
-            <Image source={logo} style={styles.logoImg}/>
-            <View>
-                <Text style={styles.logoDesc}>{props.headerTitle}</Text>
-            </View>
+            <Text style={styles.title}>{props.headerTitle}</Text>
         </View>
     );
 };
@@ -16,15 +13,17 @@ export default function Header(props) {
 const styles = StyleSheet.create({
     header: {
         width: '100%',
-        height: 70,
+        height: 80,
+        backgroundColor: '#f4511e',
         alignContent: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: 'center'
     },
-    logoImg: {
-        width: 35,
-        height: 35
-    },
-    logoDesc: {
-        fontFamily: 'OpenSans'
+    title: {
+        fontFamily: 'OpenSans',
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontSize: 20,
+        paddingTop: 23
     }
 });

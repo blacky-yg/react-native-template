@@ -10,28 +10,28 @@ export default function Footer() {
                 style={styles.button}
                 onPress={() => RootNavigation.navigate('Home')}
             >
-                <Text>Home</Text>
+                <Text style={styles.text}>Home</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 style={styles.button}
                 onPress={() => RootNavigation.navigate('Catalog')}
             >
-                <Text>Catalog</Text>
+                <Text style={styles.text}>Catalog</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 style={styles.button}
                 onPress={() => RootNavigation.navigate('Settings')}
             >
-                <Text>Settings</Text>
+                <Text style={styles.text}>Settings</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 style={styles.button}
                 onPress={() => RootNavigation.navigate('Profile')}
             >
-                <Text>Profile</Text>
+                <Text style={styles.text}>Profile</Text>
             </TouchableOpacity>
 
         </View>
@@ -44,9 +44,14 @@ const styles = StyleSheet.create({
         height: 80,
         flexDirection: 'row',
         alignItems: 'flex-start',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: '#f4511e',
     },
     button: {
-        padding: 20
+        padding: 25
+    },
+    text: {
+        fontSize: 20,
+        fontWeight: 'bold'
     }
 })
